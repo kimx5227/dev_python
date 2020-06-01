@@ -10,7 +10,7 @@ print(anime_df.loc[anime_df["episodes"] == "1"])
 # note syntax of filtering multiple columns
 print(anime_df.loc[(anime_df["episodes"] == "1") & (anime_df["rating"] == 7.3)])
 anime_df["Should I watch"] = anime_df["rating"].apply(
-    lambda x: "Yeah" if 7.0 <= x else "sucks big balls")
+    lambda x: "Yeah" if 7.0 <= x else "No")
 print(anime_df)
 to_drop = ['Should I watch']
 anime_df.drop(columns=to_drop, inplace=True)
